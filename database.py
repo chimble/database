@@ -16,8 +16,8 @@ class Database():
                 f.write("\n")
 
     def add(self, new_user):
-        self.data.append(','.join(new_user))
-        self._save()
+            self.data.append(','.join(new_user))
+            self._save()
 
     def remove(self, user_name):
         for row in self.data:
@@ -25,12 +25,14 @@ class Database():
                 self.data.remove(row)
                 self._save()
 
-c = Database()
-c.add(['test', 'abcd', 'ddddd', '452k'])
-print(c[1][:8])
-user_input = input("user_nameplz")
-user_password = input("pw plz")
-for row in c.data:
-    if user_input in row:
-        if user_password in row:
-            print("GOGOGOG")
+    # def multiple_users(self, user_name):
+    #     print("stuf")
+    #     not_sameness = True
+    #     for row in self.data:
+    #         if user_name[0] in row:
+    #             not_sameness = False
+    #             return not_sameness
+    #         return not_sameness
+
+#c.add(['test', 'abcd', 'ddddd', '452k'])
+# print(c[1][:8])
